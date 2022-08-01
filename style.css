@@ -1,0 +1,245 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--primary-light);
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-dark);
+}
+
+input, select, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+li img {
+    width: 30px;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 5fr / 300px 5fr;
+    grid-template-areas: "sidepanel header" "sidepanel content";
+}
+
+.sidepanel {
+    grid-area: sidepanel;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 20px;
+    padding-top: 30px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr 1fr/2fr 1fr;
+    padding: 30px 50px;
+    gap: 30px;
+    align-items: center;
+    background-color: var(--secondary-light);    
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-search-left img, .header-search-right img, .user-help-left img{
+    width: 30px;
+}
+
+.header-search-left, .header-search-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-search-left input {
+    flex: 1;
+    border-radius: 50px;
+    height: 1.5rem;
+    padding-left: 7px;
+    background-color: var(--primary-light);
+}
+
+.header-search-right img + img{
+    width: 50px;
+}
+
+.header-search-right {
+    justify-self: center;
+}
+
+.user-help-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.user-help-left>img {
+    width: 70px;
+}
+
+.greetings {
+    font-size: 20px;
+}
+
+.greetings p + p {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.user-help-right {
+    display: flex;
+    gap: 20px;
+    justify-content:   center;
+}
+
+button {
+    font-size: 25px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.content {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template-areas: "left-content top-right-content" "left-content bottom-right-content";
+    padding: 50px;
+    gap: 20px;
+}
+
+.announcement, .projects, .trending {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stuff, .announcement-content, .trending-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--secondary-light);
+    padding: 15px;
+    border-radius: 20px;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: large;
+    gap: 5px;
+}
+
+.stuff {
+    justify-content: space-between;
+}
+
+.projects {
+    grid-area: left-content;
+}
+
+.projects>p , .announcement>p, .trending>p{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.stuff-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.stuff img {
+    width: 30px;
+}
+
+.stuff p:first-child {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.stuff p {
+    color: gray;
+}
+
+.stuff-icons {
+    align-self: flex-end;
+    display: flex;
+    gap: 5px;
+}
+
+.announcement {
+    grid-area: top-right-content;
+}
+
+
+.announcement-border {
+    background-color: var(--primary-dark);
+    height: 1px;
+    width: 100%;
+}
+
+.announcement-content p:first-child {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.announcement-content p {
+    color: grey;
+}
+
+.trending {
+    grid-area: bottom-right-content;
+}
+
+.profiles {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profiles img {
+    width: 50px;
+}
+
+.profiles p+p {
+    color: gray;
+}
+
+
